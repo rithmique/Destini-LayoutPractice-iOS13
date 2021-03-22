@@ -7,24 +7,22 @@
 //
 
 import Foundation
+import UIKit
 
 struct Story {
     var title: String
+    var image: UIImage?
     var choice1: String
     var choice2: String
+    let choice1Destination: Int
+    let choice2Destination: Int
     
-    init(t: String, ch1: String, ch2: String){
+    init(t: String, img: UIImage?, ch1: String, ch2: String, ch1D: Int, ch2D: Int){
         self.title = t
+        self.image = img
         self.choice1 = ch1
         self.choice2 = ch2
-    }
-    func getStory() -> String {
-        return title
-    }
-    func getChoice1() -> String {
-        return choice1
-    }
-    func getChoice2() -> String {
-        return choice2
+        self.choice1Destination = ch1D
+        self.choice2Destination = ch2D
     }
 }
